@@ -1,0 +1,22 @@
+{
+    "books": [
+        {
+            "id": 1,
+            "name": "The atr of computer programming",
+            "author": "Donald E. Knuth",
+            "pages": 685,
+            "coverURL": "http://covers.db/cover1.jpg",
+            "descriptionURL": "http://books.db/descriptions/1",
+            "tags": [],
+            "score": 5
+        }
+    ]
+    "speakers": [
+        {
+            "id": 1,
+            "surname": "Ilyusin",
+            "firstname": "Andrey",
+            "secondname": "V."
+        }
+    ]
+}
