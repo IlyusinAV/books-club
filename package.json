@@ -1,8 +1,8 @@
 {
-  "name": "ember-test2",
+  "name": "books-club",
   "version": "0.0.0",
   "private": true,
-  "description": "Small description for ember-test2 goes here",
+  "description": "Small description for books-club goes here",
   "license": "MIT",
   "author": "",
   "directories": {

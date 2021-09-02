@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'ember-test2',
+    modulePrefix: 'books-club',
     environment,
     rootURL: '/',
     locationType: 'auto',

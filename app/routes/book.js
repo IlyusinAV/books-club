@@ -1,50 +1,61 @@
 import Route from '@ember/routing/route';
 import { inject as service } from '@ember/service';
-import { action } from '@ember/object';
 import { later } from '@ember/runloop';
 
 
 export default Route.extend ({
-    dataService: service(),
-
-    async model({ search }) {
-      let promise = new Promise((resolve, reject) => {
-          later(() => {
-            resolve(this.dataService.readBooks(search));
-          }, 2000);
-      }).
-      then((data) => {
-        this.controller.model = data;
-      }).
-      catch((e) => {
-        // this.send('error', e);
-        this.controller.isError = true;
-        this.controller.error = e.message;
-      }).
-      finally(() => {
-        if (promise === this.lastPromise) {
-          this.controller.isLoading = false;
+  dataService: service('data'),
+  queryParams: {
+    search: {
+      refreshModel: true
+    }
+  },
+  model({ search }) {
+    let promise = new Promise((resolve, reject) => {
+      later(async () => {
+        try {
+          let books = search ? await this.get("dataService").getbooks(search) : await this.get("dataService").getbooks();
+          resolve(books);
         }
-      });
-  
-      this.lastPromise = promise;
-      return {
-        isLoading: true
+        catch (e) {
+          reject('Connection failed');
+        }
+      }, 1000);
+    }).
+    then((books) => {
+      this.set('controller.model', books);
+    }).
+    finally(() => {
+      if (promise === this.get('modelPromise')) {
+        this.set('controller.isLoading', false);
       }
+    });
+
+    this.set('modelPromise', promise);
+    return { isLoading: true };
+  },
+
+  setupController(controller, model) {
+    this._super(...arguments);
+    if (this.get('modelPromise')) {
+      controller.set('isLoading', true);
+    }
+  },
+
+  resetController(controller, isExiting, transition) {
+    this._super(...arguments);
+    if (isExiting) {
+      controller.set('isLoading', false);
+      this.set('modelPromise', null);
+    }
+  },
+
+  actions: {
+    refreshbooks() {
+      this.refresh();
     },
-  
-    setupController(controller, model) {
-      super.setupController(...arguments);
-  
-      controller.isLoading = true;
-      controller.isError = false;
-    },
-  
-    resetController(controller, isExiting) {
-      if (isExiting) {
-        controller.isError = false;
-        controller.isLoading = false;
-        this.lastPromise = false;
-      }
-    },
+    loading(transition, originRoute) {
+      return false;
+    }
+  }
 });
