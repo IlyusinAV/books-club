@@ -12,15 +12,13 @@ export default Route.extend ({
   },
   model({ search }) {
     let promise = new Promise((resolve, reject) => {
-      later(async () => {
-        try {
-          let books = search ? await this.get("dataService").getbooks(search) : await this.get("dataService").getbooks();
-          resolve(books);
-        }
-        catch (e) {
-          reject('Connection failed');
-        }
-      }, 1000);
+      try {
+        let books = search ? this.get("dataService").getBooks(search) : this.get("dataService").getBooks();
+        resolve(books);
+      }
+      catch (e) {
+        reject('Connection failed');
+      }
     }).
     then((books) => {
       this.set('controller.model', books);
@@ -51,7 +49,7 @@ export default Route.extend ({
   },
 
   actions: {
-    refreshbooks() {
+    refreshBooks() {
       this.refresh();
     },
     loading(transition, originRoute) {

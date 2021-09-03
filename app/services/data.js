@@ -1,26 +1,26 @@
 import Service from '@ember/service';
 import ENV from 'books-club/config/environment';
 
-export default Service.extand ({
+export default Service.extend ({
   getBooks(search) {
     let queryParams = '';
     if (search) {
       queryParams=`?q=${search}`;
     }
-
-    return fetch(`${ENV.backendURL}/Books${queryParams}`).then((response) => response.json());
+console.log(ENV);
+    return fetch(`${ENV.APP.backendURL}/Books${queryParams}`).then((response) => response.json());
   },
 
   getBook(id) {
-    return fetch(`${ENV.backendURL}/Books/${id}`).then((response) => response.json());
+    return fetch(`${ENV.APP.backendURL}/Books/${id}`).then((response) => response.json());
   },
 
   deleteBook(Book) {
-    return fetch(`${ENV.backendURL}/Books/${Book.id}`, { method: 'DELETE'});
+    return fetch(`${ENV.APP.backendURL}/Books/${Book.id}`, { method: 'DELETE'});
   },
 
   createBook(Book) {
-    return fetch(`${ENV.backendURL}/Books`, {
+    return fetch(`${ENV.APP.backendURL}/Books`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -30,7 +30,7 @@ export default Service.extand ({
   },
 
   updateBook(Book) {
-    return fetch(`${ENV.backendURL}/Books/${Book.id}`, {
+    return fetch(`${ENV.APP.backendURL}/Books/${Book.id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json'
