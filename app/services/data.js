@@ -7,34 +7,34 @@ export default Service.extend ({
     if (search) {
       queryParams=`?q=${search}`;
     }
-    return fetch(`${ENV.APP.backendURL}/Books${queryParams}`).then((response) => response.json());
+    return fetch(`${ENV.APP.backendURL}/books${queryParams}`).then((response) => response.json());
   },
 
   getBook(id) {
-    return fetch(`${ENV.APP.backendURL}/Books/${id}`).then((response) => response.json());
+    return fetch(`${ENV.APP.backendURL}/books/${id}`).then((response) => response.json());
   },
 
-  deleteBook(Book) {
-    return fetch(`${ENV.APP.backendURL}/Books/${Book.id}`, { method: 'DELETE'});
+  deleteBook(book) {
+    return fetch(`${ENV.APP.backendURL}/books/${book.id}`, { method: 'DELETE'});
   },
 
-  createBook(Book) {
-    return fetch(`${ENV.APP.backendURL}/Books`, {
+  createBook(book) {
+    return fetch(`${ENV.APP.backendURL}/books`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(Book)
+      body: JSON.stringify(book)
     });
   },
 
-  updateBook(Book) {
-    return fetch(`${ENV.APP.backendURL}/Books/${Book.id}`, {
+  updatebook(book) {
+    return fetch(`${ENV.APP.backendURL}/books/${book.id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(Book)
+      body: JSON.stringify(book)
     });
   } 
 });
