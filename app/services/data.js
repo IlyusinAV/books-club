@@ -7,7 +7,6 @@ export default Service.extend ({
     if (search) {
       queryParams=`?q=${search}`;
     }
-console.log(ENV);
     return fetch(`${ENV.APP.backendURL}/Books${queryParams}`).then((response) => response.json());
   },
 

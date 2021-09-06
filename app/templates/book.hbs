@@ -1,4 +1,4 @@
-<div class="htop">
+<div class="container htop">
   <h2 class="text-center">Книги</h2>
 
   <div class="panel-content">
@@ -7,9 +7,9 @@
         <img src="assets/images/loading.gif" alt="Loading">
       </div>
     {{else}}
-    <ul class="collection">
+    <ul class="row row-cols-1 row-cols-md-3 fix-margin">
       {{#each model as |book|}}
-        {{book-item tittle=book.tittle author=book.author idBook=book.id tagName='li'}}
+        {{book-item book=book}}
       {{/each}}
     </ul>
     {{/if}}
