@@ -11,7 +11,7 @@ export default Route.extend ({
     }
   },
   model({ search }) {
-    let promise = new Promise((resolve, reject) => {
+    /* let promise = new Promise((resolve, reject) => {
       try {
         let books = search ? this.get("dataService").getBooks(search) : this.get("dataService").getBooks();
         resolve(books);
@@ -30,23 +30,24 @@ export default Route.extend ({
     });
 
     this.set('modelPromise', promise);
-    return { isLoading: true };
+    return { isLoading: true }; */
+    return this.get('store').findAll('book');
   },
 
   setupController(controller, model) {
     this._super(...arguments);
-    if (this.get('modelPromise')) {
-      controller.set('isLoading', true);
-    }
+    // if (this.get('modelPromise')) {
+    //   controller.set('isLoading', true);
+    // }
   },
 
-  resetController(controller, isExiting, transition) {
+  /* resetController(controller, isExiting, transition) {
     this._super(...arguments);
     if (isExiting) {
       controller.set('isLoading', false);
       this.set('modelPromise', null);
     }
-  },
+  }, */
 
   actions: {
     refreshBooks() {
