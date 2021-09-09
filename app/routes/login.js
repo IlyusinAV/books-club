@@ -1,0 +1,17 @@
+import Route from '@ember/routing/route';
+
+export default Route.extend({
+    model() {
+        return {
+            email: '',
+            password: ''
+        }
+    },
+
+    resetController(controller, isExiting, transition) {
+        this._super(...arguments);
+        if (isExiting) {
+            controller.resetErrors();
+        }
+    }
+});
