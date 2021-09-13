@@ -31,14 +31,14 @@
       <ul class="nav navbar-nav">
         {{#if session.isAuthenticated}}
           <li class="nav-item">
-            <a href="#" onclick={{action "logout"}}>Logout</a>
+            <a href="#" onclick={{action "logout"}}>Выход</a>
           </li>
         {{else}}
           <li class="nav-item">
-            {{#link-to "register" class="nav-link"}}Sign-up{{/link-to}}
+            {{#link-to "login" class="nav-link"}}Вход{{/link-to}}
           </li>
           <li class="nav-item">
-            {{#link-to "login" class="nav-link"}}Sign-in{{/link-to}}
+            {{#link-to "register" class="nav-link"}}Регистрация{{/link-to}}
           </li>
         {{/if}}
       </ul>

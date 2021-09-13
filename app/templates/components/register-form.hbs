@@ -9,7 +9,7 @@
   </div>
 
   <div class="field">
-    <label>Username:</label>
+    <label>Имя пользователя:</label>
     {{input type="text" placeholder="Username" value=username}}
 
     {{#each errors.username as |error|}}
@@ -18,7 +18,7 @@
   </div>
 
   <div class="field">
-    <label>Password:</label>
+    <label>Пароль:</label>
     {{input type="password" placeholder="Password" value=password}}
 
     {{#each errors.password as |error|}}
@@ -27,7 +27,7 @@
   </div>
 
   <div class="field">
-    <label>Confirm Password:</label>
+    <label>Подтверждение пароля:</label>
     {{input type="password" placeholder="Confirm Password" value=passwordConfirmation}}
 
     {{#each errors.passwordConfirmation as |error|}}
@@ -36,6 +36,6 @@
   </div>
 
   <div class="form-footer">
-    <button type="submit" class="btn-submit">save</button>
+    <button type="submit" class="btn-submit">Сохранить</button>
   </div>
 </form>

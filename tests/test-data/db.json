@@ -1,67 +1,76 @@
 {
-    "books": [
-        {
-            "type": "book",
-            "id": 1,
-            "tittle": "The atr of computer programming",
-            "author": "Donald E. Knuth",
-            "pages": 685,
-            "coverURL": "http://covers.db/cover1.jpg",
-            "descriptionURL": "http://books.db/descriptions/1",
-            "tags": "#Программирование",
-            "score": "1.00"
-        },
-        {
-            "type": "book",
-            "id": 2,
-            "tittle": "Clean code: a handbook of agile software craftsmanship",
-            "author": "Robert C. Martin",
-            "pages": 464,
-            "coverURL": "http://covers.db/cover2.jpg",
-            "descriptionURL": "http://books.db/descriptions/2",
-            "tags": "#Программирование",
-            "score": "0.9"
-        },
-        {
-            "type": "book",
-            "id": 3,
-            "tittle": "Clean architecture: a craftsman's guide to software structure and design",
-            "author": "Robert C. Martin",
-            "pages": 352,
-            "coverURL": "http://covers.db/cover3.jpg",
-            "descriptionURL": "http://books.db/descriptions/3",
-            "tags": "#Программирование #Проектирование",
-            "score": "0.9"
-        },
-        {
-            "type": "book",
-            "id": 4,
-            "tittle": "Refactoring. Improving the design of existing code",
-            "author": "Martin Fowler",
-            "pages": 432,
-            "coverURL": "http://covers.db/cover4.jpg",
-            "descriptionURL": "http://books.db/descriptions/4",
-            "tags": "#Программирование",
-            "score": "0.6"
-        },
-        {
-            "type": "book",
-            "id": 5,
-            "tittle": "Design Patterns: Elements of Reusable Object-Oriented Software",
-            "author": "Gang of Four",
-            "pages": 368,
-            "coverURL": "http://covers.db/cover5.jpg",
-            "descriptionURL": "http://books.db/descriptions/5",
-            "tags": "#Программирование #Проектирование",
-            "score": "0.4"
-        }
-    ],
-    "speakers": [
-        {
-            "id": 1,
-            "surname": "Ilyusin",
-            "firstname": "Andrey",
-            "secondname": "V."
-        }
-    ]
+  "books": [
+    {
+      "type": "book",
+      "id": 1,
+      "tittle": "The atr of computer programming",
+      "author": "Donald E. Knuth",
+      "pages": 685,
+      "coverURL": "http://covers.db/cover1.jpg",
+      "descriptionURL": "http://books.db/descriptions/1",
+      "tags": "#Программирование",
+      "score": "1.00"
+    },
+    {
+      "type": "book",
+      "id": 2,
+      "tittle": "Clean code: a handbook of agile software craftsmanship",
+      "author": "Robert C. Martin",
+      "pages": 464,
+      "coverURL": "http://covers.db/cover2.jpg",
+      "descriptionURL": "http://books.db/descriptions/2",
+      "tags": "#Программирование",
+      "score": "0.9"
+    },
+    {
+      "type": "book",
+      "id": 3,
+      "tittle": "Clean architecture: a craftsman's guide to software structure and design",
+      "author": "Robert C. Martin",
+      "pages": 352,
+      "coverURL": "http://covers.db/cover3.jpg",
+      "descriptionURL": "http://books.db/descriptions/3",
+      "tags": "#Программирование #Проектирование",
+      "score": "0.9"
+    },
+    {
+      "type": "book",
+      "id": 4,
+      "tittle": "Refactoring. Improving the design of existing code",
+      "author": "Martin Fowler",
+      "pages": 432,
+      "coverURL": "http://covers.db/cover4.jpg",
+      "descriptionURL": "http://books.db/descriptions/4",
+      "tags": "#Программирование",
+      "score": "0.6"
+    },
+    {
+      "type": "book",
+      "id": 5,
+      "tittle": "Design Patterns: Elements of Reusable Object-Oriented Software",
+      "author": "Gang of Four",
+      "pages": 368,
+      "coverURL": "http://covers.db/cover5.jpg",
+      "descriptionURL": "http://books.db/descriptions/5",
+      "tags": "#Программирование #Проектирование",
+      "score": "0.4"
+    }
+  ],
+  "speakers": [
+    {
+      "id": 1,
+      "surname": "Ilyusin",
+      "firstname": "Andrey",
+      "secondname": "V."
+    }
+  ],
+  "users": [
+    {
+      "email": "andreyilusin@gmail.com",
+      "username": "Андрей Илюсин",
+      "password": "ae94e6442cf965cb8728e47799c31d383808f6f917df63cb18c73ae00d5e1916",
+      "passwordConfirmation": "ae94e6442cf965cb8728e47799c31d383808f6f917df63cb18c73ae00d5e1916",
+      "id": 1
+    }
+  ]
 }
