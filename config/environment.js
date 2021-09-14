@@ -20,12 +20,7 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-      backendURL: 'http://localhost:3000',
-    },
-    
-    'ember-simple-auth-token': {
-      serverTokenEndpoint: 'http://localhost:3000/token',
-      refreshAccessTokens: false
+      backendURL: 'http://localhost:3000'
     }
   };
 
