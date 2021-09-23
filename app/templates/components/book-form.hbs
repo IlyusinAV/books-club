@@ -1,1 +1,7 @@
-{{yield}}
+<form class="edit-form" onsubmit={{action "saveBook"}}>
+  <div class="field">
+    <label>Название:</label>
+    {{input type="text" placeholder="Title" value=title}}
+  </div>
+
+</form>

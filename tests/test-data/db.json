@@ -3,7 +3,7 @@
     {
       "type": "book",
       "id": 1,
-      "tittle": "The atr of computer programming",
+      "title": "The atr of computer programming",
       "author": "Donald E. Knuth",
       "pages": 685,
       "coverURL": "http://covers.db/cover1.jpg",
@@ -14,7 +14,7 @@
     {
       "type": "book",
       "id": 2,
-      "tittle": "Clean code: a handbook of agile software craftsmanship",
+      "title": "Clean code: a handbook of agile software craftsmanship",
       "author": "Robert C. Martin",
       "pages": 464,
       "coverURL": "http://covers.db/cover2.jpg",
@@ -25,7 +25,7 @@
     {
       "type": "book",
       "id": 3,
-      "tittle": "Clean architecture: a craftsman's guide to software structure and design",
+      "title": "Clean architecture: a craftsman's guide to software structure and design",
       "author": "Robert C. Martin",
       "pages": 352,
       "coverURL": "http://covers.db/cover3.jpg",
@@ -36,7 +36,7 @@
     {
       "type": "book",
       "id": 4,
-      "tittle": "Refactoring. Improving the design of existing code",
+      "title": "Refactoring. Improving the design of existing code",
       "author": "Martin Fowler",
       "pages": 432,
       "coverURL": "http://covers.db/cover4.jpg",
@@ -47,7 +47,7 @@
     {
       "type": "book",
       "id": 5,
-      "tittle": "Design Patterns: Elements of Reusable Object-Oriented Software",
+      "title": "Design Patterns: Elements of Reusable Object-Oriented Software",
       "author": "Gang of Four",
       "pages": 368,
       "coverURL": "http://covers.db/cover5.jpg",
