@@ -1,1 +1,36 @@
-{{yield}}
+<form onsubmit={{action "submitForm"}}>
+  <div class="field">
+    <label>Название</label>
+    {{input type="text" placeholder="title" value=title}}
+  </div>
+
+  <div class="field">
+    <label>Автор</label>
+    {{input type="text" placeholder="author" value=author}}
+  </div>
+
+  <div class="field">
+    <label>Объём</label>
+    {{input type="text" placeholder="pages" value=pages}}
+  </div>
+
+  <div class="field">
+    <label>Описание</label>
+    {{input type="text" placeholder="descriptionURL" value=descriptionURL}}
+  </div>
+
+  <div class="field">
+    <label>Обложка</label>
+    {{input type="text" placeholder="coverURL" value=coverURL}}
+  </div>
+
+  <div class="field">
+    <label>Тэги</label>
+    {{input type="text" placeholder="tags" value=tags}}
+  </div>
+
+  <div class="field">
+    <label>Оценка</label>
+    {{input type="text" placeholder="score" value=score}}
+  </div>
+</form>

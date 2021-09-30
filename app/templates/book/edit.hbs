@@ -1,2 +1,3 @@
-{{#bs-modal-simple title="Редактирование книги"}}
+{{#bs-modal-simple title="Редактирование книги" closeTitle="Закрыть" submitTitle="Сохранить" size="lg"}}
+  {{book-form book=model onsubmit=(action "saveBook")}}
 {{/bs-modal-simple}}

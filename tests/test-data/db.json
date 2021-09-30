@@ -9,7 +9,7 @@
       "coverURL": "http://covers.db/cover1.jpg",
       "descriptionURL": "http://books.db/descriptions/1",
       "tags": "#Программирование",
-      "score": "1.00"
+      "score": "5"
     },
     {
       "type": "book",
@@ -20,7 +20,7 @@
       "coverURL": "http://covers.db/cover2.jpg",
       "descriptionURL": "http://books.db/descriptions/2",
       "tags": "#Программирование",
-      "score": "0.9"
+      "score": "4"
     },
     {
       "type": "book",
@@ -31,7 +31,7 @@
       "coverURL": "http://covers.db/cover3.jpg",
       "descriptionURL": "http://books.db/descriptions/3",
       "tags": "#Программирование #Проектирование",
-      "score": "0.9"
+      "score": "4"
     },
     {
       "type": "book",
@@ -42,7 +42,7 @@
       "coverURL": "http://covers.db/cover4.jpg",
       "descriptionURL": "http://books.db/descriptions/4",
       "tags": "#Программирование",
-      "score": "0.6"
+      "score": "4"
     },
     {
       "type": "book",
@@ -53,7 +53,7 @@
       "coverURL": "http://covers.db/cover5.jpg",
       "descriptionURL": "http://books.db/descriptions/5",
       "tags": "#Программирование #Проектирование",
-      "score": "0.4"
+      "score": "3"
     }
   ],
   "speakers": [
